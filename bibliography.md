@@ -17,3 +17,7 @@ https://stackoverflow.com/questions/27324854/how-do-i-make-a-node-move-in-sprite
 
 -Node Swapping
 https://github.com/ecmadao/algorithms/blob/master/leetcode/Swift/No24.swap-nodes-in-pairs.swift
+
+
+-Mutating functions
+https://medium.com/the-andela-way/swift-understanding-mutating-functions-in-two-minutes-d9e363904e3a
