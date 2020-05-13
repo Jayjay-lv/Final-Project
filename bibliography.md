@@ -21,3 +21,7 @@ https://github.com/ecmadao/algorithms/blob/master/leetcode/Swift/No24.swap-nodes
 
 -Mutating functions
 https://medium.com/the-andela-way/swift-understanding-mutating-functions-in-two-minutes-d9e363904e3a
+
+
+- randon number
+https://learnappmaking.com/random-numbers-swift/
