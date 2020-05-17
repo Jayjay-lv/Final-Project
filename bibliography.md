@@ -25,3 +25,7 @@ https://medium.com/the-andela-way/swift-understanding-mutating-functions-in-two-
 
 - randon number
 https://learnappmaking.com/random-numbers-swift/
+
+
+- randomize
+https://stackoverflow.com/questions/29955823/whats-the-difference-between-arc4random-and-arc4random-uniform
