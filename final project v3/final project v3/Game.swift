@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+/*
 class MatchingGame {
     var cards:[Card] = [Card]()
     var cardsFlipped:[Card] = [Card]()
@@ -95,5 +95,5 @@ class MatchingGame {
     }
     
     
-    
-}
+    */
+

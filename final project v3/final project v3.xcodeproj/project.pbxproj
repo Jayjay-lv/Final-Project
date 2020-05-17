@@ -15,6 +15,8 @@
 		0C6C9A6C246BAA6C00639991 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6C9A6A246BAA6C00639991 /* LaunchScreen.storyboard */; };
 		0C6C9A74246BAAB300639991 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C9A73246BAAB300639991 /* Card.swift */; };
 		0C6C9A76246BACD400639991 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C9A75246BACD400639991 /* Game.swift */; };
+		0C6C9A982471C21500639991 /* CardM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C9A972471C21500639991 /* CardM.swift */; };
+		0C6C9A9A2471C69800639991 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6C9A992471C69800639991 /* CardCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0C6C9A6D246BAA6C00639991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C6C9A73246BAAB300639991 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0C6C9A75246BACD400639991 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		0C6C9A972471C21500639991 /* CardM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardM.swift; sourceTree = "<group>"; };
+		0C6C9A992471C69800639991 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 				0C6C9A5F246BAA6B00639991 /* AppDelegate.swift */,
 				0C6C9A61246BAA6B00639991 /* SceneDelegate.swift */,
 				0C6C9A63246BAA6B00639991 /* ViewController.swift */,
+				0C6C9A992471C69800639991 /* CardCollectionViewCell.swift */,
 				0C6C9A73246BAAB300639991 /* Card.swift */,
+				0C6C9A972471C21500639991 /* CardM.swift */,
 				0C6C9A75246BACD400639991 /* Game.swift */,
 				0C6C9A65246BAA6B00639991 /* Main.storyboard */,
 				0C6C9A68246BAA6C00639991 /* Assets.xcassets */,
@@ -145,8 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6C9A64246BAA6B00639991 /* ViewController.swift in Sources */,
+				0C6C9A982471C21500639991 /* CardM.swift in Sources */,
 				0C6C9A76246BACD400639991 /* Game.swift in Sources */,
 				0C6C9A60246BAA6B00639991 /* AppDelegate.swift in Sources */,
+				0C6C9A9A2471C69800639991 /* CardCollectionViewCell.swift in Sources */,
 				0C6C9A62246BAA6B00639991 /* SceneDelegate.swift in Sources */,
 				0C6C9A74246BAAB300639991 /* Card.swift in Sources */,
 			);

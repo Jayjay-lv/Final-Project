@@ -10,6 +10,17 @@ import Foundation
 
 
 class Card {
+    
+    var imageName = ""
+    var isFlipped = false
+    var isMatched = false
+    
+    
+    
+    
+}
+    
+    /*
     var id: String
     var shown: Bool = false
     var picture: UIIMage!
@@ -44,6 +55,6 @@ func copy() -> Card {
             }
         }
     }
+    */
     
     
-}

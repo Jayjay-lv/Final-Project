@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,10 +29,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Rke-Wk-3OF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="Rke-Wk-3OF" customClass="CardCollectionViewCell" customModule="final_project_v3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="146" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xNR-f3-emY">
                                             <rect key="frame" x="0.0" y="0.0" width="146" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -42,18 +43,22 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="146" height="220"/>
                                                 </imageView>
                                             </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstItem="WM4-B7-n95" firstAttribute="leading" secondItem="Rke-Wk-3OF" secondAttribute="leading" id="6X3-qB-OAp"/>
-                                            <constraint firstAttribute="trailing" secondItem="Trn-SZ-Ybn" secondAttribute="trailing" id="FUq-f7-0Uj"/>
-                                            <constraint firstItem="Trn-SZ-Ybn" firstAttribute="leading" secondItem="Rke-Wk-3OF" secondAttribute="leading" id="RFp-do-TuI"/>
-                                            <constraint firstItem="WM4-B7-n95" firstAttribute="top" secondItem="Rke-Wk-3OF" secondAttribute="top" id="SX4-DA-GvN"/>
-                                            <constraint firstItem="Trn-SZ-Ybn" firstAttribute="top" secondItem="Rke-Wk-3OF" secondAttribute="top" id="fBU-ZK-lL0"/>
-                                            <constraint firstAttribute="trailing" secondItem="WM4-B7-n95" secondAttribute="trailing" id="miT-Vu-lHj"/>
-                                            <constraint firstAttribute="bottom" secondItem="WM4-B7-n95" secondAttribute="bottom" id="pba-hQ-oTN"/>
-                                            <constraint firstAttribute="bottom" secondItem="Trn-SZ-Ybn" secondAttribute="bottom" id="qNq-sE-cYT"/>
-                                        </constraints>
+                                            <constraints>
+                                                <constraint firstItem="WM4-B7-n95" firstAttribute="leading" secondItem="xNR-f3-emY" secondAttribute="leading" id="6X3-qB-OAp"/>
+                                                <constraint firstAttribute="trailing" secondItem="Trn-SZ-Ybn" secondAttribute="trailing" id="FUq-f7-0Uj"/>
+                                                <constraint firstItem="Trn-SZ-Ybn" firstAttribute="leading" secondItem="xNR-f3-emY" secondAttribute="leading" id="RFp-do-TuI"/>
+                                                <constraint firstItem="WM4-B7-n95" firstAttribute="top" secondItem="xNR-f3-emY" secondAttribute="top" id="SX4-DA-GvN"/>
+                                                <constraint firstItem="Trn-SZ-Ybn" firstAttribute="top" secondItem="xNR-f3-emY" secondAttribute="top" id="fBU-ZK-lL0"/>
+                                                <constraint firstAttribute="trailing" secondItem="WM4-B7-n95" secondAttribute="trailing" id="miT-Vu-lHj"/>
+                                                <constraint firstAttribute="bottom" secondItem="WM4-B7-n95" secondAttribute="bottom" id="pba-hQ-oTN"/>
+                                                <constraint firstAttribute="bottom" secondItem="Trn-SZ-Ybn" secondAttribute="bottom" id="qNq-sE-cYT"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
                                         <size key="customSize" width="146" height="220"/>
+                                        <connections>
+                                            <outlet property="backImageView" destination="Trn-SZ-Ybn" id="TVD-w5-Prf"/>
+                                            <outlet property="frontImageView" destination="WM4-B7-n95" id="pPB-3q-Y2I"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -71,6 +76,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="kUG-kC-CW3" id="eZG-b0-FAk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
