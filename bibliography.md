@@ -25,3 +25,18 @@ https://medium.com/the-andela-way/swift-understanding-mutating-functions-in-two-
 
 - randon number
 https://learnappmaking.com/random-numbers-swift/
+
+
+- Patterns
+https://docs.swift.org/swift-book/ReferenceManual/Patterns.html
+
+
+- Methods
+https://www.tutorialspoint.com/swift/swift_methods.htm
+
+https://www.appcoda.com/swift-delegate/
+
+
+- Re-usable cell
+
+https://developer.apple.com/documentation/uikit/uitableview/1614891-dequeuereusablecell
