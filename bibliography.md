@@ -40,3 +40,10 @@ https://www.appcoda.com/swift-delegate/
 - Re-usable cell
 
 https://developer.apple.com/documentation/uikit/uitableview/1614891-dequeuereusablecell
+
+- Optional Chaining
+
+https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html
+- Dispatch Queue
+
+https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main
