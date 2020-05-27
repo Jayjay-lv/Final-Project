@@ -9,12 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-   
     
     
-   
     
-
+    
+    
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -29,10 +29,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
         
-       
+        
         
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardArray.count
     }
@@ -49,10 +49,24 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         
-        cell.flipped()
+        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        
+        let card = cardArray[indexPath.row]
+        
+        if card.isFlipped == false {
+             cell.flipped()
+            
+            card.isFlipped = true
+        }
+        else {
+            cell.flipppedBack()
+            
+            card.isFlipped = false
+        }
+        
+        
     }
- 
+    
 }
 

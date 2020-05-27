@@ -24,6 +24,15 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         frontImageView.image = UIImage(named: card.imageName)
         
+        if card.isFlipped == true{
+            UIView.transition(from: backImageView, to: frontImageView, duration: 0, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        }
+        else {
+            UIView.transition(from: frontImageView, to: backImageView, duration: 0, options: [.transitionFlipFromLeft, . showHideTransitionViews], completion: nil)
+            
+        }
+        
+        
     }
     
     func flipped() {
@@ -31,7 +40,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func flipppedBack() {
-           UIView.transition(from: frontImageView, to: backImageView, duration: 0.1, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        UIView.transition(from: frontImageView, to: backImageView, duration: 0.1, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
     }
     
     
