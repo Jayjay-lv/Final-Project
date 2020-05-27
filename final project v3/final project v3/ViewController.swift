@@ -20,6 +20,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var cardArray = [Card]()
     var model = CardM()
+    var firstFlipIndex:IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,15 +59,51 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
              cell.flipped()
             
             card.isFlipped = true
-        }
-        else {
-            cell.flipppedBack()
             
-            card.isFlipped = false
+            if firstFlipIndex == nil {
+                firstFlipIndex = indexPath
+            }
+            else {
+                
+                checkForMatch(indexPath)
+            }
+            
         }
         
         
     }
+    
+    func checkForMatch(_ secondFlipIndex:IndexPath) {
+        
+        let cardOneCell = collectionView.cellForItem(at: firstFlipIndex!) as? CardCollectionViewCell
+        
+        
+        let cardTwoCell = collectionView.cellForItem(at: secondFlipIndex) as? CardCollectionViewCell
+        
+        let cardOne = cardArray[firstFlipIndex!.row]
+        let cardTwo = cardArray[secondFlipIndex.row]
+        
+        if cardOne.imageName == cardTwo.imageName {
+            
+            cardOne.isMatched = true
+            cardTwo.isMatched = true
+            
+            cardOneCell?.remove()
+            cardTwoCell?.remove()
+        }
+        else {
+            
+            cardOne.isFlipped = false
+            cardTwo.isFlipped = false
+            
+            cardOneCell?.flipppedBack()
+            cardTwoCell?.flipppedBack()
+        }
+        
+        firstFlipIndex = nil
+    }
+    
+    
     
 }
 
