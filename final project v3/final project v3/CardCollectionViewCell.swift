@@ -50,7 +50,11 @@ class CardCollectionViewCell: UICollectionViewCell {
     func remove() {
         
         backImageView.alpha = 0
-        frontImageView.alpha = 0
+        
+        UIView.animate(withDuration: 0.3, delay: 0.5, options: .curveEaseOut, animations: {
+            self.frontImageView.alpha = 0
+        }, completion: nil)
+        
     }
     
     
