@@ -25,7 +25,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
    
     
     var timer:Timer?
-    var milliseconds:Float = 10 * 1000
+    var milliseconds:Float = 20 * 1000
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -175,15 +175,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         showAlert(title, message)
     }
     
-    func showAlert (_ title:String,_  message:String ) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        
-        alert.addAction(alertAction)
-        
-        present(alert, animated: true, completion: nil)
-        
-    }
+ func showAlert(_ title:String, _ message:String) {
+         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+         let alertAction = UIAlertAction(title: "Restart", style: .default) { (restart) in
+             self.restart()
+         }
+         alert.addAction(alertAction)
+         self.present(alert, animated: true, completion: nil)
+     }
+
+     
+     func restart() {
+         cardArray = [Card]()
+         cardArray = model.getCards()
+         milliseconds = 20 * 1000
+         timerLabel.textColor = UIColor.black
+         collectionView.reloadData()
+         timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+         RunLoop.main.add(timer!, forMode: .common)
+     }
     
 }
 
